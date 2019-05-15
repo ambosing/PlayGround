@@ -4,51 +4,33 @@ using namespace std;
 
 int main()
 {
-	int t;
-	int r;
-	char s[21];
-	char result[2000];
-	int res_size;
-	int s_size;
-	int j = 0;
+	char cpt[501];
+	int i;
+	int idx[501];
+	int count = 0;
+	int temp = 0;
 
-	cin >> t;
+	
+	while(1)
+	{
+		gets(cpt);
 
-	while(t != 0){
-		cin >> r >> s;
+		for(i = 0; i < sizeof(cpt); i++){
 
-		s_size = sizeof(s);
-
-
-		for(j = 0; j < s_size; j++ ){
-
-			if(s[j] == '\0') break;
-
+			if(cpt[i] == '\0') break;
 		}
+		if((cpt[0] == 'E') && (cpt[1] == 'N') && (cpt[2] == 'D') && (cpt[3] == '\0'))
+			break;
 
-		res_size = 0;
-
-		for(int i = 0; i < j; i++){
-
-			for(int k = 0; k < r; k++){
-
-				result[res_size] = s[i];
-
-				res_size++;
-			}
-		}
-
-		for(int i = 0; i < res_size; i++){
-
-			cout << result[i];
+		for(int j = i-1; j >= 0; j--)
+		{
+			cout << cpt[j];
 		}
 
 		cout << endl;
 
-
-
-		t--;
 	}
 
+	
 	return 0;
 }

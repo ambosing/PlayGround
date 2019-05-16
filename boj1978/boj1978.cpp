@@ -4,36 +4,34 @@ using namespace std;
 
 int main()
 {
-	int x,y,w,h;
-	int min = 10000;
-	int temp1, temp2;
+	int n,j;
+	int is_prm[100];
+	int prm_count = 0;
 
-	cin >> x >> y >> w >> h;
 
-	
-	if((w-x) < x){
+	cin >> n;
 
-		temp1 = w-x;
+	for(int i = 0; i < n; i++){
+
+		cin >> is_prm[i];
+
+		if(is_prm[i] == 2){
+			prm_count++;
+			continue;
+		}
+
+		for( j = 2; j < is_prm[i]; j++){
+
+			if(is_prm[i] % j == 0) break;
+
+		}
+		
+		if(j == is_prm[i]) prm_count++;	
+
+
 	}
-	else{
-		temp1 = x;
-	}
 
-	if((h-y) < y){
-
-		temp2 = h-y;
-	}
-
-	else{
-
-		temp2 = y;
-	}
-
-	if( temp1 < temp2) min = temp1;
-	else min = temp2;
-
-	cout << min;
-	
+	cout << prm_count++;
 
 	
 	return 0;

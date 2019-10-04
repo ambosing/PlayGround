@@ -2,7 +2,7 @@ package java_algorithm;
 import java.util.Scanner;
 
 
-public class Solution {
+public class SWEA1209 {
 	public static void main(String args[]) {
 		int test = 0;
 		int[][] xy = new int[100][100];

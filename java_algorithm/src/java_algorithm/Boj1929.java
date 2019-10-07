@@ -1,45 +1,42 @@
 package java_algorithm;
-import java.util.StringTokenizer;
-import java.io.*;
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Boj1929 {
-	public static void main(String args[]) throws Exception
+	public static void main(String args[])
 	{
-		int prnum1, prnum2;
-		int i,j;
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		int m, n;
+		int i, j;
+		Scanner sc = new Scanner(System.in);
+		ArrayList<Boolean> Array;
 		
-		String s = br.readLine();
 		
-		StringTokenizer st = new StringTokenizer(s);
+		m = sc.nextInt();
+		n = sc.nextInt();
+		Array = new ArrayList<Boolean>(n+1);
 		
-		prnum1 = Integer.parseInt(st.nextToken());
-		prnum2 = Integer.parseInt(st.nextToken());
 		
-		for(i = prnum1; i <= prnum2; i++)
+		Array.add(false);
+		Array.add(false);
+		
+		for(i = 2; i <= n; i++)
 		{
-			if(i == 2)
-			{
-				bw.write(String.valueOf(i));
-				bw.newLine();
-				bw.flush();
-				continue;
-			}
-			for(j = 2; j < i; j++)
-			{
-				if(i % j == 0)
-					break;
-			}
+			Array.add(true);
 			
-			if(j == i) 
+		}
+		
+		for(i = 2; (i*i) <= n; i++) {
+			if(Array.get(i))
 			{
-				bw.write(String.valueOf(i));
-				bw.newLine();
-				bw.flush();
-
+				for(j = i*2; j<=n; j+=i) Array.set(j,false);
 			}
 		}
-
+		
+		for(i = m; i<=n; i++)
+		{
+			if(Array.get(i) == true)
+				System.out.println(i);
+		}
 	}
 }

@@ -4,7 +4,7 @@ public class SWEA1213 {
 	public static void main(String args[])
 	{
 		int test = 0;
-		String str;
+		String str ;
 		String input;
 		Scanner sc = new Scanner(System.in);
 		String temp;

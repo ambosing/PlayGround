@@ -51,7 +51,7 @@ public class SWEA1215 {
 					temp.append(str3);
 					temp = temp.reverse();
 					rev = temp.toString();
-;					if(str3.contentEquals(rev))
+					if(str3.contentEquals(rev))
 						cnt++;
 					temp = null;
 					temp = new StringBuffer();
@@ -75,7 +75,7 @@ public class SWEA1215 {
 					temp.append(str3);
 					temp = temp.reverse();
 					rev = temp.toString();
-;					if(str3.contentEquals(rev))
+					if(str3.contentEquals(rev))
 						cnt++;
 					temp = null;
 					temp = new StringBuffer();

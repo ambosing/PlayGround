@@ -61,8 +61,7 @@ public class SWEA1218 {
 				
 			}
 			
-			for(int k = 0; k < 8; k++)
-				System.out.print(str2[k]+ " ");
+			
 			
 			for(int j = 0; j < 8; j = j+2)
 			{

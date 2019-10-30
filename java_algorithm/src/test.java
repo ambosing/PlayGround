@@ -1,17 +1,19 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class test {
 	public static void main(String args[])
 	{
-		String str = "123456";
-		String str1 = str;
-		StringBuffer str2 = new StringBuffer();
+		int[] num = new int[10];
+		Scanner sc = new Scanner(System.in);
 		
-		str2.append(str);
-		System.out.println(str2);
-		str2.delete(0, 3);
-		System.out.println(str2);
-		str1 = str2.toString();
-		System.out.println(str1);
+		int temp = Integer.parseInt(sc.nextLine());
+		
+		String temp1 = sc.nextLine();
+		String[] temp3 = temp1.split(" ");
+		
+		int temp2 = Integer.parseInt(temp3[1]);
+		
+		System.out.println(temp+ " " + temp3[0] + " " + temp2 + temp3[2]);
 	}
 }

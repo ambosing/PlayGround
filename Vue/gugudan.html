@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>구구단</title>
+    <script src = "https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body bgcolor= "yellow" >
+    <div id = "root">
+      <h1>구구단</h1>
+      <font size = '10px' color = "green">
+      <div >
+        {{first}}곱하기 {{second}}는?
+      </div>
+      <form v-on:submit="onSubmitForm">
+        <input  style = "width:200pt;height :100px;" type="number" ref= "answer" v-model ="value">
+        <button style = "width:200pt;height :100px;" type="submit">입력</button>
+      </form>
+      <div id = "result">
+        {{result}}
+      </div>
+      <button style = "margin-top : 10px;width:200pt;height :100px;" type="button"  class="navyBtn" onClick="location.href='wordRelay.html'"> 끝말잇기 하러가기 </button>
+      </font>
+    </div>
+
+  </body>
+
+  <script>
+    const app = new Vue({
+      el : '#root',
+      data: {
+        first: Math.ceil(Math.random()*9),
+        second: Math.ceil(Math.random()*9),
+        value: '',
+        result: '',
+      },
+      methods:{
+        onSubmitForm(e){
+          e.preventDefault();
+          if(this.first * this.second === parseInt(this.value))
+          {
+            this.result = '정답';
+            this.first = Math.ceil(Math.random()*9);
+            this.second = Math.ceil(Math.random()*9);
+            this.value = '';
+            this.$refs.answer.focus();
+          }
+          else {
+            this.result = '땡!';
+          }
+        }
+      },
+    });
+  </script>
+</html>

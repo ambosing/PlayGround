@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src = "https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+    </script>
+
+  </head>
+  <body bgcolor = 'green'>
+    <div background = "green" id = "root">
+      <word-relay start-word="양지원"> </word-relay>
+    
+
+    </div>
+
+  </body>
+  <script>
+    Vue.component('word-relay', {
+      template: `
+      <div>
+        <h1>끝말잇기</h1>
+        <font size = '10px' color = "white">
+        <div >
+          {{word}}
+        </div>
+        <form v-on:submit="onSubmitForm">
+          <input style = "width:200pt;height : 100px;" type="text" ref="answer" v-model="value">
+          <button style = "width:200pt;height :100px;" type="submit">입력</button>
+        </form>
+        <div >
+          {{result}}
+        </div>
+        <button style = "margin-top : 10px;width:200pt;height :100px;" type="button"  class="navyBtn" onClick="location.href='gugudan.html'"> 구구단 하러가기 </button>
+        </font>
+      </div>
+      `,
+      props: ['startWord'],
+      data() {
+        return{
+          word: this.startWord,
+          result : '',
+          value: '',
+        }
+
+      },
+      methods : {
+        onSubmitForm(e){
+          e.preventDefault();
+          if(this.word[this.word.length-1] === this.value[0]){
+            this.result = '딩동댕';
+            this.word = this.value;
+            this.value = '';
+            this.$refs.answer.focus();
+          }
+          else
+          {
+            this.result = '땡';
+            this.value = '';
+            this.$refs.answer.focus();
+          }
+        },
+      },
+
+    })
+
+  </script>
+  <script>
+    const app = new Vue({
+      el : '#root',
+    });
+
+  </script>
+</html>

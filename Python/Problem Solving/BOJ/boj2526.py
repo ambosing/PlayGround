@@ -1,3 +1,6 @@
+from collections import defaultdict
+
+
 def is_in_list(lst, item):
     if item in lst:
         return True
@@ -6,11 +9,17 @@ def is_in_list(lst, item):
 
 
 n, p = map(int, input().split())
+dic = defaultdict(int)
 a = []
-while not is_in_list(a, n):
-    a.append(n)
-    nn = n ** 2
-    pp = nn % p
-    n = pp
+num = n
+dic[num] = 0
+while max(dic.values()) < 3:
+    dic[num] += 1
+    nn = num * n
+    num = nn % p
 
-print(len(a))
+res = 0
+for k, v in dic.items():
+    if v >= 2:
+        res += 1
+print(res)

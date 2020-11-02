@@ -1,5 +1,6 @@
-from collections import deque
+from collections import defaultdict
 
-d = deque([1, 2, 3, 4])
-d.rotate(-0)
+d = defaultdict(int)
+if 'a' in d:
+    print('a')
 print(d)

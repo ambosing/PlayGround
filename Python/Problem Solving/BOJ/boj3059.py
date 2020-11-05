@@ -21,4 +21,4 @@ for i in range(t):
     temp = 0
     for item in lst:
         temp += ord(item)
-    sys.stdout.write(str(alpha_hap - temp) + "\n")
+    sys.stdout.write(str(alpha_hap - temp) + "n")

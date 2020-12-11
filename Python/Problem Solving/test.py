@@ -1,6 +1,9 @@
-from collections import defaultdict
+import pygame
 
-d = defaultdict(int)
-if 'a' in d:
-    print('a')
-print(d)
+pygame.init()
+screen = pygame.display.set_mode((300, 300))
+
+screen.fill((255, 0, 0))
+pygame.display.update()
+while True:
+    print()

@@ -22,4 +22,3 @@ board[0][0] = 1
 cnt = 0
 dfs(0, 0)
 print(cnt)
-py

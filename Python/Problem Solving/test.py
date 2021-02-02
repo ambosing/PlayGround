@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 글자 띄우기 예시
 import pygame, sys
 from pygame.locals import *
@@ -88,3 +89,10 @@ while True:
     pygame.draw.rect(screen, (255, 255, 255), stick)
     pygame.draw.rect(screen, (255, 0, 0), ball)
     pygame.display.update()
+=======
+def r(a, b, c):
+    print(a, b, c)
+
+
+r(*map(int, input().split()))
+>>>>>>> cf95c7184137d724f6a4bdf851747b96d71178e1

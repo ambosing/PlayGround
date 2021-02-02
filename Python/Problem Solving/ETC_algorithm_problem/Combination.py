@@ -12,7 +12,7 @@ def dfs(a):
     global cnt
     if a == m:
         if check_big(lst):
-            stdout.write(" ".join(lst) + "\n")
+            stdout.write(" ".join(lst) + "n")
             cnt += 1
     else:
         for i in range(1, n + 1):

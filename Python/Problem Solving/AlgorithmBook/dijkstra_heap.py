@@ -4,7 +4,7 @@ import sys
 n, m = map(int, sys.stdin.readline().split())
 start = int(input())
 graph = [[] for _ in range(n + 1)]
-INF = sys.maxsize
+INF = int(1e9)
 distance = [INF] * (n + 1)
 for _ in range(m):
     a, b, c = map(int, sys.stdin.readline().split())
@@ -33,3 +33,5 @@ for j in range(1, n + 1):
         print('INFINITY')
     else:
         print(distance[j])
+
+

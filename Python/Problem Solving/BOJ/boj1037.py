@@ -1,5 +1,4 @@
-t = int(input())
-lst = list(map(int, input().split()))
-result = min(lst) * max(lst)
-
-print(result)
+n = int(input())
+nums = list(map(int, input().split()))
+nums.sort()
+print(nums[0] * nums[-1])

@@ -1,32 +1,32 @@
-def return_dis(m):
-    max_dis = 0
+def distance_cnt(m):
     cnt = 1
-    pre = lst[0]
-    for i in lst:
-        val = pre - i
-        if val > m:
-            if max_dis < val:
-                max_dis = val
-            pre = i
+    min_dis = int(1e9)
+    pre = nums[0]
+    for i in range(1, len(nums)):
+        dis = nums[i] - pre
+        if dis >= m:
             cnt += 1
-    return max_dis, cnt
+            if min_dis > dis:
+                min_dis = dis
+            pre = nums[i]
+    return min_dis, cnt
 
 
 n, c = map(int, input().split())
-lst = []
+nums = []
 for _ in range(n):
-    lst.append(int(input()))
-lst.sort()
+    nums.append(int(input()))
+nums.sort()
 s = 1
-e = lst[-1]
+e = nums[-1]
 res = 0
 while s <= e:
     mid = (s + e) // 2
-    print(mid)
-    dis, cnt = return_dis(mid)
-    if cnt < c:
+    distance, count = distance_cnt(mid)
+    if count < c:
         e = mid - 1
     else:
         s = mid + 1
-        res = dis
+        if res < distance:
+            res = distance
 print(res)

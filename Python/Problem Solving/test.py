@@ -1,2 +1,4 @@
-lst = [i + j for i in range(5) for j in range(5)]
-print(lst[0:2][2])
+def a(lst, res):
+    lst.append([1, 2, 3])
+    res.append(lst)
+

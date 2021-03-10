@@ -1,9 +1,9 @@
 def dfs(a, b):
     global res
-    if res < b:
-        res = b
     if a > n + 1:
         return
+    if res < b:
+        res = b
     for i in range(a, n + 1):
         dfs(i + lst[i][0], b + lst[i][1])
 

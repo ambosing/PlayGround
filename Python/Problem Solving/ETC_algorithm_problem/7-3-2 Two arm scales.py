@@ -1,17 +1,16 @@
-def dfs(a, num_sum, num_sum_rev):
-    if a >= n:
-        return
-    for i in range(a, n):
-        v[nums[i] - 1] = True
-        v[num_sum_rev - nums[i] - 1] = True
-        dfs(i + 1, num_sum + nums[i], num_sum_rev - nums[i])
+def dfs(a, b):
+    if a == n:
+        if 0 < b <= hap:
+            res.add(b)
+    else:
+        dfs(a + 1, b + lst[a])
+        dfs(a + 1, b - lst[a])
+        dfs(a + 1, b)
 
 
 n = int(input())
-nums = list(map(int, input().split()))
-nums.sort()
-hap = sum(nums)
-v = [False] * hap
-v[hap - 1] = True
-dfs(0, 0, hap)
-print(v.count(False))
+lst = list(map(int, input().split()))
+res = set()
+hap = sum(lst)
+dfs(0, 0)
+print(hap - len(res))

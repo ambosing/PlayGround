@@ -2,11 +2,12 @@ def dfs(a, b):
     global res
     if b > t:
         return
-    elif b == t:
-        res += 1
+    elif a == k:
+        if b == t:
+            res += 1
     else:
-        for i in range(a, n):
-            dfs(i + 1, b + coins[i])
+        for i in range(coins[a][1] + 1):
+            dfs(a + 1, b + coins[a][0] * i)
 
 
 t = int(input())
@@ -16,9 +17,6 @@ res = 0
 n = 0
 for _ in range(k):
     money, cnt = map(int, input().split())
-    n += cnt
-    for _ in range(cnt):
-        coins.append(money)
-coins.sort(reverse=True)
+    coins.append([money, cnt])
 dfs(0, 0)
 print(res)

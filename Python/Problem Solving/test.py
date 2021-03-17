@@ -1,4 +1,3 @@
-def a(lst, res):
-    lst.append([1, 2, 3])
-    res.append(lst)
-
+a = set([1, 2, 3])
+a.add([1, 2, 5])
+print(a)

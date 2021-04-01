@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+      
+      $(document).ready(function() {
+          
+			$("button").click(function () {
+				var result;
+				var input = $(this).text();
+				if (input == 5)
+					result = parseInt((5 * 6) / 2);
+				else if  (input == 10)
+					result = parseInt((10 * 11) / 2);
+				else
+					result = parseInt((15 * 16) / 2);
+				$("#result").text(result);
+			})
+    	   
+    	});
+</script>
+</head>
+<body>
+<button>5</button>
+<button>10</button>
+<button>15</button><br>
+총합:<span id="result"></span>
+</body>
+</html>

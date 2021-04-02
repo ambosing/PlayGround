@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+   
+   var arr = [];  
+    $(document).ready(function() {
+      $("#v1").keyup(function () {
+          if (event.keyCode == 13) {
+             $("#result").append($("#v1").val() + "<br>");
+          }
+      })
+  });
+</script>
+</head>
+<body>
+ 값:<input type="search" name="v1" id="v1">
+  <div id="result">
+ 
+ </div>
+
+</body>
+</html>

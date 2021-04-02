@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+  
+	 	$("#ssn1").keyup(function(){
+			 console.log($("#ssn1").val().length);
+			if ($("#ssn1").val().length == 6) {
+				$("#ssn2").focus();
+			}
+		 });
+
+  });
+</script>
+</head>
+<body>
+주민번호:
+<input type="text" name="ssn1" id="ssn1">UTF-8
+<input type="text" name="ssn2" id="ssn2">
+</body>
+</html>

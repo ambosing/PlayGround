@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+   
+    $(document).ready(function(){
+        $("#xxx").click(getData);
+
+        function getData() {
+            $.ajax({
+                type : "get",
+                url : "broadcast.jsp",
+                dataType : "xml",
+                success: function (data, status, xhr) {
+                    console.log("요청 성공");
+                    var mesg = "<table border='1'>";
+                    mesg += "<tr>";
+                    mesg += "<th>term</th>";
+                    mesg += "<th>part</th>";
+                    mesg += "<th>mes</th>";
+                    mesg += "</tr>";
+
+                    $(data).find("entry").each(function (idx, ele) {
+                        console.log($(this));
+                        var term = $(this).attr("term");
+                        var part = $(this).attr("part");
+                        var mes = $(this).children("mes").text();
+                        mesg += "<tr>";
+                        mesg += "<th>" + term + "</th>";
+                        mesg += "<th>" + part + "</th>";
+                        mesg += "<th>" + mes + "</th>";
+                        mesg += "</tr>";
+                    });
+                    mesg += "</table>";
+
+                    $("#result").html(mesg);
+                },
+                error: function(xhr, status, e) {
+                    console.log(e + " : " + status);
+                }
+            })
+        }
+    });
+    
+
+</script>
+</head>
+<body>
+
+<button id="xxx">XML</button>
+<div id="result"></div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

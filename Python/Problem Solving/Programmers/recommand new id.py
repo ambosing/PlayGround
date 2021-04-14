@@ -1,41 +1,40 @@
-def step1(id):
-    new_id = []
-    for i, c in enumerate(id):
-        if not(c.isalpha() or c == '.' or c == '-' or c == '_' or c.isdigit()):
-            continue
-        if c.isalpha():
-            new_id.append(c.lower())
-        elif c == '.' and (i == 0 or i == len(id) - 1):
-            continue
-        elif i != 0 and id[i - 1] == '.':
-            continue
-        else:
-            new_id.append(c)
-    if not new_id:
+def step1(origin):
+    new = []
+    for i, c in enumerate(origin):
+        if c.isalpha() or c.isdigit() or c == '.' or c == '-' or c == '_':
+            if c == '.' and new and new[-1] == '.':
+                continue
+            new.append(c.lower())
+    return new
+
+
+def step2(origin):
+    while origin and origin[0] == '.':
+        origin.pop(0)
+    while origin and origin[-1] == '.':
+        origin.pop()
+    if not origin:
         return "a"
-    return "".join(new_id)
+    return origin
 
 
-def step2(id):
-    idx = len(id)
-    while idx >= 0 and id[idx] == ".":
-        id.pop()
-        idx -= 1
-    if len(id) > 15:
-        new_id = list(id[:15])
-        if new_id[14] == '.':
-            new_id.pop()
+def step3(origin):
+    origin = list(origin)
+    if len(origin) > 15:
+        new = origin[:15]
+        while new[-1] == '.':
+            new.pop()
     else:
-        new_id = list(id)
-    if len(new_id) <= 2:
-        for i in range(3):
-            new_id.append(new_id[len(new_id) - 1])
-            if len(new_id) >= 3:
-                break
-    return "".join(new_id)
+        new = origin
+    for i in range(3):
+        if len(new) >= 3:
+            break
+        new.append(new[-1])
+    return "".join(new)
 
 
 def solution(new_id):
     answer = step1(new_id)
     answer = step2(answer)
+    answer = step3(answer)
     return answer

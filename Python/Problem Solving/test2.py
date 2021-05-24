@@ -1,5 +1,12 @@
-def dfs(g,route):
-
+def dfs(g, r, visit):
+    for k, v in g.items():
+        if k not in visit:
+            visit[k] = 0
+            r.append("(")
+            r.append(k)
+            if g[k][1]
+                dfs(g, r, visit)
+            r.append(")")
 
 
 def error(g):
@@ -42,4 +49,6 @@ for t in test_case:
     else:
         graph[t[1]][0].append(t[0])
 
-
+route = []
+dfs(graph, route, dict())
+print(''.join(route))

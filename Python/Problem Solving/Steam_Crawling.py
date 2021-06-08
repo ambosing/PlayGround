@@ -46,17 +46,10 @@ for a in news.select("a", attrs={"class": "search_result_row ds_collapse_flag  a
     inTitle = ainTitle.get_text()
     print("게임 이름: ", inTitle)
 
-    # # 게임 이미지 -> img 현04/24 확인, 막힘 (403 Forbidden)
-    # ainImage = soup.find(
-    #     "img", attrs={"class": "game_header_image_full"})
-    # imgUrl = ainImage.get('src')
-    # r = requests.get(imgUrl, stream=True)
-    # if r.status_code == 200:
-    #     print(r.status_code)
-    #     with urllib.request.urlopen(imgUrl) as f:
-    #         with open('./img/'+inTitle+'.jpg', 'wb') as h:
-    #             ainImage = f.read()
-    #             h.write(ainImage)
+    # 게임 이미지
+
+    inImage = soup.select_one("#gameHeaderImageCtn > img")
+    print("게임 이미지: " + inImage['src'])
 
     # 게임 타이틀 내용/요약
     inContent = soup.find("div", attrs={"class": "game_description_snippet"})
@@ -99,11 +92,10 @@ for a in news.select("a", attrs={"class": "search_result_row ds_collapse_flag  a
         tagList.append(tag.text.strip())
     print("게임 태그: " + ", ".join(tagList))
 
-    #게임 이미지
-    # 사진 큰 것
-    images = soup.select("#highlight_player_area > div.highlight_player_item.highlight_screenshot > div.screenshot_holder > a.highlight_screenshot_link")
-    for img in images:
-        print(img['href'])
+    # STEAM 리스트 사진 큰 것
+    # images = soup.select("#highlight_player_area > div.highlight_player_item.highlight_screenshot > div.screenshot_holder > a.highlight_screenshot_link")
+    # for img in images:
+    #     print(img['href'])
 
     # 사진이 너무 작음
     # images = soup.select("#highlight_strip_scroll > div.highlight_strip_item.highlight_strip_screenshot > img")
@@ -112,6 +104,8 @@ for a in news.select("a", attrs={"class": "search_result_row ds_collapse_flag  a
 
 
     idx += 1
-    # try:
-    #     sql = "INSERT INTO game(gameNo, gameName, gameImage, gamePrice, gameContent, gameCategory, genreGenre, gameReleasedDate)" \
-    #           "VALUES(" + idx + ", " + "a" + ", " + inTitle + ", " + inPrice + ", " + inContent + ", " + game
+    try:
+        sql = "INSERT INTO game(gameNo, gameName, gameImage, gamePrice, gameContent, gameCategory, genreGenre, gameReleasedDate)" \
+              "VALUES(%d, %s, %s, %s, %s, %s, %s, %s)"
+        cur.execute(sql, idx);
+        cur.execute(sql, );

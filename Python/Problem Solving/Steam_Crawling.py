@@ -89,6 +89,7 @@ for a in news.select("a", attrs={"class": "search_result_row ds_collapse_flag  a
     inTag = soup.select("#game_highlights > div.rightcol > div > div.glance_ctn_responsive_right > div.glance_tags_ctn.popular_tags_ctn > div.glance_tags.popular_tags > a")
     tagList = []
     for i, tag in enumerate(inTag):
+        print(tag.text.strip())
         tagList.append(tag.text.strip())
     print("게임 태그: " + ", ".join(tagList))
 
@@ -101,11 +102,25 @@ for a in news.select("a", attrs={"class": "search_result_row ds_collapse_flag  a
     # images = soup.select("#highlight_strip_scroll > div.highlight_strip_item.highlight_strip_screenshot > img")
     # for img in images:
     #     print(img['src'])
-
-
     idx += 1
     try:
         sql = "INSERT INTO game(gameNo, gameName, gameImage, gamePrice, gameContent, gameCategory, genreGenre, gameReleasedDate)" \
-              "VALUES(%d, %s, %s, %s, %s, %s, %s, %s)"
-        cur.execute(sql, idx);
-        cur.execute(sql, );
+              "VALUES(%s, %s, %s, %s, %s, %s, %s, %s)"
+        cur.execute(sql, idx)
+        cur.execute(sql, inTitle)
+        cur.execute(sql, inImage)
+        cur.execute(sql, inPrice)
+        cur.execute(sql, inContent)
+        cur.execute(sql, tagList[0])
+        cur.execute(sql, ", ".join(tagList))
+        cur.execute(sql, inDate)
+
+        conn.commit()
+        conn.close()
+    except Exception as e:
+        print("========================================")
+        print("에러 발생!", e)
+        print(idx, inTitle, inImage, inPrice, inContent)
+        print(", ".join(tagList), inDate)
+
+

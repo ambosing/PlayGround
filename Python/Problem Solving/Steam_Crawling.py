@@ -5,7 +5,7 @@ import urllib.request
 import ssl
 import pymysql
 
-conn = pymysql.connect(host="localhost", user="root", password="root", db="pythonDB", charset="utf8")
+conn = pymysql.connect(host="localhost", user="root", password="root", db="project", charset="utf8")
 cur = conn.cursor()
 url = "https://store.steampowered.com/search/?l=koreana"
 res = requests.get(url)
@@ -48,8 +48,8 @@ for a in news.select("a", attrs={"class": "search_result_row ds_collapse_flag  a
 
     # 게임 이미지
 
-    inImage = soup.select_one("#gameHeaderImageCtn > img")
-    print("게임 이미지: " + inImage['src'])
+    inImage = soup.select_one("#gameHeaderImageCtn > img")['src']
+    print("게임 이미지: " + inImage)
 
     # 게임 타이틀 내용/요약
     inContent = soup.find("div", attrs={"class": "game_description_snippet"})
@@ -74,14 +74,24 @@ for a in news.select("a", attrs={"class": "search_result_row ds_collapse_flag  a
         ainPrice = soup.select_one(
             "#game_area_purchase > div.game_area_purchase_game > div.game_purchase_action > div > div.game_purchase_price.price")
     if ainPrice is None:
-        inPrice = "가격확인이 불가하거나 이미 소지한 게임입니다."
+        inPrice = "-2"
     else:
         inPrice = ainPrice.get_text().strip()
+        if not inPrice == "무료":
+            inPrice = inPrice[2:].split(",")
+            inPrice = "".join(inPrice)
+        else:
+            inPrice = "0"
 
     if ainPrice is None:
-        inPrice = "가격확인 불가"
+        inPrice = "-1"
     else:
         inPrice = ainPrice.get_text().strip()
+        if not inPrice == "무료":
+            inPrice = inPrice[2:].split(",")
+            inPrice = "".join(inPrice)
+        else:
+            inPrice = "0"
 
     print("게임 가격: ", inPrice)
 
@@ -103,17 +113,12 @@ for a in news.select("a", attrs={"class": "search_result_row ds_collapse_flag  a
     # for img in images:
     #     print(img['src'])
     idx += 1
+    lst = [idx, inTitle, inImage, inPrice, inContent, tagList[0], ", ".join(tagList), inDate]
     try:
-        sql = "INSERT INTO game(gameNo, gameName, gameImage, gamePrice, gameContent, gameCategory, genreGenre, gameReleasedDate)" \
-              "VALUES(%s, %s, %s, %s, %s, %s, %s, %s)"
-        cur.execute(sql, idx)
-        cur.execute(sql, inTitle)
-        cur.execute(sql, inImage)
-        cur.execute(sql, inPrice)
-        cur.execute(sql, inContent)
-        cur.execute(sql, tagList[0])
-        cur.execute(sql, ", ".join(tagList))
-        cur.execute(sql, inDate)
+        print(lst)
+        sql = "INSERT INTO game(gameNo, gameName, gameImage, gamePrice, gameContent, gameCategory, gameGenre, gameReleasedDate)" \
+              "VALUES(%s, %s, %s, %s, %s, %s, %s, %s);"
+        cur.execute(sql, lst)
 
         conn.commit()
         conn.close()

@@ -10,7 +10,7 @@ conn = pymysql.connect(host="localhost",
                        db="project",
                        charset="utf8")
 cur = conn.cursor()
-url = "https://store.steampowered.com/search/?l=koreana"
+url = "https://store.steampowered.com/search/?specials=1&l=koreana"
 res = requests.get(url)
 res.raise_for_status()
 soup_list = BeautifulSoup(res.text, "lxml")  # 모든 태그 가져오기
@@ -24,17 +24,20 @@ sales = soup_list.select(
    "div.col.search_price_discount_combined.responsive_secondrow > div.col.search_discount.responsive_secondrow ")
 sales = map(str, sales)
 sale_list = []
-for sale in sales:
+for i, sale in enumerate(sales):
     sale = re.findall(r'[\d]+', sale)
     if sale:
         sale_list.append(sale[0])
     else:
         sale_list.append("0")
+    print(i + 1, "게임 할인율 :", sale)
+
 
 unv_context = ssl._create_unverified_context()
 
 # 각 게임당 접속
-for idx, a in enumerate(news.select("a", attrs={"class": "search_result_row ds_collapse_flag  app_impression_tracked"})):
+for idx, a in enumerate(news.select("a",
+                                    attrs={"class": "search_result_row ds_collapse_flag  app_impression_tracked"})):
 
     code = a.get('data-ds-appid')
     if not code:
@@ -83,13 +86,16 @@ for idx, a in enumerate(news.select("a", attrs={"class": "search_result_row ds_c
 
     # 게임 가격
     ainPrice = soup.select_one(
-        "div.game_purchase_action > div > div.discount_block.game_purchase_discount > div.discount_prices > div.discount_original_price")
+        "div.game_purchase_action > div > div.discount_block.game_purchase_discount > "
+        "div.discount_prices > div.discount_original_price")
     if ainPrice is None:
         ainPrice = soup.select_one(
-            "div.game_area_purchase_game_wrapper > div >  div.game_purchase_action > div >  div.game_purchase_price.price")
+            "div.game_area_purchase_game_wrapper > div >  "
+            "div.game_purchase_action > div >  div.game_purchase_price.price")
     if ainPrice is None:
         ainPrice = soup.select_one(
-            "#game_area_purchase > div.game_area_purchase_game > div.game_purchase_action > div > div.game_purchase_price.price")
+            "#game_area_purchase > div.game_area_purchase_game > "
+            "div.game_purchase_action > div > div.game_purchase_price.price")
     if ainPrice is None:
         inPrice = "가격 확인이 불가한 게임입니다."
     else:
@@ -114,7 +120,8 @@ for idx, a in enumerate(news.select("a", attrs={"class": "search_result_row ds_c
     print("게임 가격: ", inPrice)
 
     #게임 태그
-    inTag = soup.select("#game_highlights > div.rightcol > div > div.glance_ctn_responsive_right > div.glance_tags_ctn.popular_tags_ctn > div.glance_tags.popular_tags > a")
+    inTag = soup.select("#game_highlights > div.rightcol > div > div.glance_ctn_responsive_right > "
+                        "div.glance_tags_ctn.popular_tags_ctn > div.glance_tags.popular_tags > a")
     tagList = []
     for i, tag in enumerate(inTag):
         tagList.append(tag.text.strip())
@@ -138,11 +145,11 @@ for idx, a in enumerate(news.select("a", attrs={"class": "search_result_row ds_c
         cur.execute(sql, lst)
 
 
-
     except Exception as e:
         print("========================================")
         print("에러 발생!", e)
         print(idx, inTitle, inImage, inPrice, inContent)
         print(", ".join(tagList), inDate)
+
 conn.commit()
 conn.close()

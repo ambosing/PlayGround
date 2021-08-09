@@ -3,19 +3,19 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Collections;
 
-class Descending implements Comparator<Integer> {
+class Descendings implements Comparator<Integer> {
     public int compare(Integer a, Integer b) {
         return b.compareTo(a);
     }
 }
 
-class Ascending implements Comparator<Integer> {
+class Ascendings implements Comparator<Integer> {
     public int compare(Integer a, Integer b) {
         return a.compareTo(b);
     }
 }
 
-class Solution {
+class Solution1 {
     public int[] solution(int[] array, int[][] commands) {
         int[] answer = new int[commands.length];
         int idx;

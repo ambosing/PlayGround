@@ -15,7 +15,7 @@ class Ascending implements Comparator<Integer> {
     }
 }
 
-class Solution {
+class Solution2 {
     public int[] solution(int[] array, int[][] commands) {
         int[] answer = new int[commands.length];
         int idx;

@@ -27,7 +27,7 @@ public class Solution {
                     min[0] = i;
                     min[1] = j;
                     min[2] = scores[j][i];
-                    max[3] = 1;
+                    min[3] = 1;
                 } else if (min[2] == scores[j][i])
                     min[3] += 1;
                 sum[i] += scores[j][i];

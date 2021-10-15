@@ -115,7 +115,7 @@ public class GameManager : MonoBehaviour
         m_GameWinner = GetGameWinner();
 
         string message = EndMessage();
-        m_MessageText.text = message;
+        m_MessageText.text  = message;
 
         yield return m_EndWait;
     }

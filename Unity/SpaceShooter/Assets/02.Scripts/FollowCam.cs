@@ -18,6 +18,15 @@ public class FollowCam : MonoBehaviour
     [Range(0.0f, 10.0f)]
     public float height = 2.0f;
 
+    // 카메라 LookAt의 Offset 값
+    public float targetOffset = 2.0f;
+
+    // 반응 속도
+    public float damping = 10.0f;
+
+    // SmoothDamp에서 사용할 변수
+    private Vector3 velocity = Vector3.zero;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,11 +44,22 @@ public class FollowCam : MonoBehaviour
     {
         // 추적해야 할 대상의 뒤쪽으로 distance만큼 이동
         // 높이를 height만큼 이동
-        camTr.position = targetTr.position
+        Vector3 pos = targetTr.position
                          + (-targetTr.forward * distance)
                          + (Vector3.up * height);
 
+        // 구면 선형 보간 함수를 사용해 부드럽게 위치를 변경
+        //camTr.position = Vector3.Slerp(camTr.position, // 시작 위치
+        //                               pos,            // 목표 위치
+        //                               Time.deltaTime * damping); // 시
+
+        // SmoothDamp를 이용한 위치 보간
+        camTr.position = Vector3.SmoothDamp(camTr.position,
+                                            pos,
+                                            ref velocity,
+                                            damping);
+
         // Camera를 피벗 좌표를 향해 회전
-        camTr.LookAt(targetTr.position);
+        camTr.LookAt(targetTr.position + (targetTr.up * targetOffset));
     }
 }

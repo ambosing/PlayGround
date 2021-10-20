@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCtrl : MonoBehaviour
 {
@@ -14,9 +15,24 @@ public class PlayerCtrl : MonoBehaviour
     //회전 속도 변수
     public float turnSpeed = 80.0f;
 
+    private readonly float initHp = 100.0f;
+
+    public float currHp;
+
+    public delegate void PlayerDieHandler();
+
+    public static event PlayerDieHandler OnPlayerDie;
+
+    private Image hpBar;
+
     // Start is called before the first frame update
     IEnumerator Start()
     {
+        hpBar = GameObject.FindGameObjectWithTag("HP_BAR")?.GetComponent<Image>();
+
+        currHp = initHp;
+        DisplayHealth();
+
         //Transform 컴포넌트를 추출해 변수에 대입
         tr = GetComponent<Transform>();
         anim = GetComponent<Animation>();
@@ -77,5 +93,41 @@ public class PlayerCtrl : MonoBehaviour
         {
             anim.CrossFade("Idle", 0.25f); // 정지 애니메이션 실행
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (currHp >= 0.0f && other.CompareTag("PUNCH"))
+        {
+            currHp -= 10.0f;
+            DisplayHealth();
+
+            Debug.Log($"Player hp = {currHp / initHp}");
+
+            
+        }
+        if (currHp <= 0.0f)
+        {
+            PlayerDie();
+        }
+    }
+
+    void PlayerDie()
+    {
+        Debug.Log("Player Die !");
+
+        //GameObject[] monsters = GameObject.FindGameObjectsWithTag("MONSTER");
+
+        //foreach(GameObject monster in monsters)
+        //{
+        //    monster.SendMessage("OnPlayerDie", SendMessageOptions.DontRequireReceiver);
+        //}
+
+        OnPlayerDie();
+    }
+
+    void DisplayHealth()
+    {
+        hpBar.fillAmount = currHp / initHp;
     }
 }

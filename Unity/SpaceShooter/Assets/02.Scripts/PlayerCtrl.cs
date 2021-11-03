@@ -12,6 +12,7 @@ public class PlayerCtrl : MonoBehaviour
 
     //이동 속도 변수 (public으로 선언되어 인스펙터 뷰에 노출됨)
     public float moveSpeed = 10.0f;
+
     //회전 속도 변수
     public float turnSpeed = 80.0f;
 
@@ -124,6 +125,9 @@ public class PlayerCtrl : MonoBehaviour
         //}
 
         OnPlayerDie();
+
+        //GameObject.Find("GameMgr").GetComponent<GameManager>().IsGameOver = true;
+        GameManager.instance.IsGameOver = true;
     }
 
     void DisplayHealth()

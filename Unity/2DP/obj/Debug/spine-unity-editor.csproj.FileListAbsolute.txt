@@ -1,0 +1,2 @@
+/Users/jiwonyang/Desktop/PlayGround/Unity/2DP/obj/Debug/spine-unity-editor.csproj.AssemblyReference.cache
+/Users/jiwonyang/Desktop/PlayGround/Unity/2DP/obj/Debug/spine-unity-editor.csproj.CoreCompileInputs.cache

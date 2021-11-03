@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{C264D391-E94D-A8D0-9CB1-664EB3C6C3E3}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/2_Scripts/btComposite.cs">
+    <Files>
+      <File FileName="Assets/2_Scripts/PlayerController.cs" Line="23" Column="14" />
+      <File FileName="Assets/2_Scripts/CameraController.cs" Line="13" Column="6" />
+      <File FileName="Assets/2_Scripts/btBehaviour.cs" Line="72" Column="10" />
+      <File FileName="Assets/2_Scripts/btRoot.cs" Line="44" Column="41" />
+      <File FileName="Assets/2_Scripts/btComposite.cs" Line="5" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c740b8dd-6472-4c9e-a4d0-4f49c81f214e" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

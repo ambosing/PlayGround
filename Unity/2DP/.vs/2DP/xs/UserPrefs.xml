@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{566A2AB0-D173-B60E-F7D4-02B4A4D71CFE}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerController.cs">
+    <Files>
+      <File FileName="Assets/Scripts/GameManager.cs" Line="44" Column="6" IsPinned="True" />
+      <File FileName="Assets/Scripts/UIManager.cs" Line="22" Column="2" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="60" Column="41" />
+      <File FileName="Assets/Spine/Runtime/spine-unity/Components/SkeletonRenderer.cs" />
+      <File FileName="Assets/Spine/Runtime/spine-csharp/Animation.cs" />
+      <File FileName="Assets/Scripts/SpawnPoints.cs" />
+      <File FileName="Assets/Scripts/SpawnPoint.cs" />
+      <File FileName="Assets/Scripts/MovingPlatform.cs" />
+      <File FileName="Assets/TEst/Script/Grid.cs" />
+      <File FileName="Assets/TEst/Script/TileCtrl.cs" />
+      <File FileName="Assets/Scripts/MovingWalkPlatform.cs" />
+      <File FileName="Assets/Scripts/PickupItem.cs" />
+      <File FileName="Assets/Scripts/Player.cs" />
+      <File FileName="Assets/Scripts/DeadTriggerObject.cs" />
+      <File FileName="Assets/Scripts/ClearTriggerObject.cs" />
+      <File FileName="Assets/Scripts/ClearUI.cs" />
+      <File FileName="Assets/Scripts/ClimbingTriggerObject.cs" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.spine-unity PreferredExecutionTarget="bc1d3738-debf-4f45-b013-6ff4575be456" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7e3618a9-a0ed-417b-85f4-c24f040a55a9" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/jiwonyang/Desktop/PlayGround/Unity/2DP/Assets/Scripts/MovingWalkPlatform.cs" relfile="Assets/Scripts/MovingWalkPlatform.cs" line="13" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

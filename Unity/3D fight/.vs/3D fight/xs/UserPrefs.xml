@@ -1,14 +1,15 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/2_Scripts/PlayerController.cs">
+﻿<Properties StartupConfiguration="{01C79603-B1FA-CCA9-179B-6F890160F7A2}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/2_Scripts/StateBehaviour/AttackStateBehaviour.cs">
     <Files>
-      <File FileName="Assets/2_Scripts/PlayerController.cs" Line="37" Column="18" />
-      <File FileName="Assets/2_Scripts/PlayerCombat.cs" Line="18" Column="32" />
-      <File FileName="Assets/2_Scripts/Weapon.cs" Line="58" Column="6" />
+      <File FileName="Assets/2_Scripts/Player/PlayerInput.cs" Line="24" Column="35" />
+      <File FileName="Assets/2_Scripts/Weapon.cs" Line="72" Column="2" />
+      <File FileName="Assets/2_Scripts/StateBehaviour/AttackStateBehaviour.cs" Line="1" Column="1" />
+      <File FileName="Assets/2_Scripts/Player/PlayerController.cs" Line="74" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6bf91b89-7ebe-4c8e-85ea-375e48058485" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="03b59c84-8130-4ede-9865-c9c46d29c5ba" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,22 +1,22 @@
 ﻿<Properties StartupConfiguration="{31EA003C-1CF9-D946-A919-8AC5ED6BE76A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/02.Scripts/UIManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/02.Scripts/MonsterCtrl.cs">
     <Files>
-      <File FileName="Assets/02.Scripts/MonsterCtrl.cs" Line="125" Column="46" IsPinned="True" />
+      <File FileName="Assets/02.Scripts/MonsterCtrl.cs" Line="13" Column="16" />
       <File FileName="Assets/02.Scripts/UIManager.cs" Line="37" Column="65" />
-      <File FileName="Assets/02.Scripts/PlayerCtrl.cs" Line="95" Column="58" />
-      <File FileName="Assets/02.Scripts/FollowCam.cs" Line="1" Column="1" />
+      <File FileName="Assets/02.Scripts/PlayerCtrl.cs" />
+      <File FileName="Assets/02.Scripts/FollowCam.cs" />
       <File FileName="Assets/02.Scripts/BulletCtrl.cs" />
-      <File FileName="Assets/02.Scripts/RemoveBullet.cs" Line="1" Column="1" />
-      <File FileName="Assets/02.Scripts/MyGizmos.cs" Line="1" Column="1" />
-      <File FileName="Assets/02.Scripts/FireCtrl.cs" Line="52" Column="1" />
-      <File FileName="Assets/02.Scripts/BarrelCtrl.cs" Line="78" Column="43" />
+      <File FileName="Assets/02.Scripts/RemoveBullet.cs" />
+      <File FileName="Assets/02.Scripts/MyGizmos.cs" />
+      <File FileName="Assets/02.Scripts/FireCtrl.cs" />
+      <File FileName="Assets/02.Scripts/BarrelCtrl.cs" />
       <File FileName="Assets/02.Scripts/DelegateDemo.cs" />
-      <File FileName="Assets/02.Scripts/GameManager.cs" Line="109" Column="9" />
+      <File FileName="Assets/02.Scripts/GameManager.cs" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b8fb2aff-bbb7-4d8b-990e-fdbef50b7baf" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d3e82149-9cce-4849-bd57-75905616ac29" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

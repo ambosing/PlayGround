@@ -59,6 +59,15 @@
     <Compile Include="Assets/2_Scripts/btRoot.cs" />
     <Compile Include="Assets/2_Scripts/btComposite.cs" />
     <Compile Include="Assets/2_Scripts/btCondition.cs" />
+    <Compile Include="Assets/2_Scripts/btSelector.cs" />
+    <Compile Include="Assets/2_Scripts/btSequence.cs" />
+    <Compile Include="Assets/2_Scripts/btAction.cs" />
+    <Compile Include="Assets/2_Scripts/EnemyAI.cs" />
+    <Compile Include="Assets/2_Scripts/EnemyState_Patrol_WayPoint.cs" />
+    <Compile Include="Assets/2_Scripts/EnemyState_Chase_IsEnemy.cs" />
+    <Compile Include="Assets/2_Scripts/EnemyState_Chase_LookAt.cs" />
+    <Compile Include="Assets/2_Scripts/EnemyState_Chase_Chase.cs" />
+    <Compile Include="Assets/2_Scripts/EnemyState_Patrol_Rotation.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,24 +6,28 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
     public float hp;
-    public Weapon curWeapon;
+    [ReadOnly] public Weapon curWeapon;
+    [HideInInspector] public Player player;
+    public float attackComboLimitTime = 2f;
 
     private void Reset()
     {
         curWeapon = GetComponentInChildren<Weapon>();
+        player = GetComponent<Player>();
+        curWeapon.owner = player;
     }
 
     private void Awake()
     {
         curWeapon = GetComponentInChildren<Weapon>();
-        curWeapon.owner = this;
+        player = GetComponent<Player>();
+        curWeapon.owner = player;
     }
 
- 
 
     public void Attack()
     {
-        
+        player._animator.Attack();
     }
 
     public void Damaged(Damaged damage)

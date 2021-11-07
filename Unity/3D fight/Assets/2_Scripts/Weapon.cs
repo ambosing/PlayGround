@@ -14,7 +14,7 @@ public class Weapon : MonoBehaviour
     public AttackCheckMode checkMode = AttackCheckMode.Enable;
     // 콜라이더 활성 비활성화로 공격판정할 떄 쓰임
     [ReadOnly] public BoxCollider _col;
-    [ReadOnly] public PlayerCombat owner;
+    [ReadOnly] public Player owner;
     public float attackPower;
 
     // OverlapBox로 공격판정할 때 쓰임
@@ -61,10 +61,10 @@ public class Weapon : MonoBehaviour
 
 public class Damaged
 {
-    public PlayerCombat attacker;
+    public Player attacker;
     public float attackPower;
 
-    public Damaged(float attackPower, PlayerCombat attacker)
+    public Damaged(float attackPower, Player attacker)
     {
         this.attackPower = attackPower;
         this.attacker = attacker;

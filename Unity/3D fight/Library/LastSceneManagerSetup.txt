@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/ExternalArt/PolygonDungeon/Scenes/Overview.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0

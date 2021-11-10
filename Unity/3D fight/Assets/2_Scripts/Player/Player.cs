@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
 
     #endregion
 
+    public Transform targetedTransform;
+
     private void Awake()
     {
         _controller = GetComponent<PlayerController>();

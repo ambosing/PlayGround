@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/ExternalArt/PolygonDungeon/Scenes/Overview.unity
+- path: Assets/1_Scenes/Demo 1.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

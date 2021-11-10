@@ -52,15 +52,24 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\1_Scripts\FSM\Core\Interfaces\IState.cs" />
      <Compile Include="Assets\2_Scripts\Player\PlayerController.cs" />
+     <Compile Include="Assets\1_Scripts\FSM\Core\Interfaces\IFSM.cs" />
      <Compile Include="Assets\2_Scripts\Attribute.cs" />
+     <Compile Include="Assets\2_Scripts\MyCameraController.cs" />
+     <Compile Include="Assets\2_Scripts\Sensor.cs" />
+     <Compile Include="Assets\1_Scripts\FSM\Core\Interfaces\IHState.cs" />
      <Compile Include="Assets\2_Scripts\StateBehaviour\AttackStateBehaviour.cs" />
+     <Compile Include="Assets\1_Scripts\FSM\Core\Base\BFSM.cs" />
      <Compile Include="Assets\2_Scripts\Player\PlayerCombat.cs" />
      <Compile Include="Assets\2_Scripts\Player\PlayerAnimator.cs" />
+     <Compile Include="Assets\1_Scripts\FSM\Core\Base\BState.cs" />
      <Compile Include="Assets\2_Scripts\Player\Player.cs" />
      <Compile Include="Assets\2_Scripts\Player\PlayerInput.cs" />
      <Compile Include="Assets\2_Scripts\Weapon.cs" />
-     <Compile Include="Assets\2_Scripts\MyCameraController.cs" />
+     <Compile Include="Assets\1_Scripts\FSM\Mono\MonoFSM.cs" />
+     <Compile Include="Assets\1_Scripts\FSM\Core\Base\BHState.cs" />
+     <Compile Include="Assets\1_Scripts\AIController.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/2020.3.18f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

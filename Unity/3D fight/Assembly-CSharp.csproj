@@ -69,7 +69,7 @@
      <Compile Include="Assets\2_Scripts\Weapon.cs" />
      <Compile Include="Assets\1_Scripts\FSM\Mono\MonoFSM.cs" />
      <Compile Include="Assets\1_Scripts\FSM\Core\Base\BHState.cs" />
-     <Compile Include="Assets\1_Scripts\AIController.cs" />
+     <Compile Include="Assets\2_Scripts\AIController.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/2020.3.18f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7716430a10eb640b8508c093d95a4c, type: 3}
+  m_Name: Sheet1
+  m_EditorClassIdentifier: 
+  SheetName: Assets/Resources/Data.xlsx
+  WorksheetName: Sheet1
+  dataArray:
+  - id: 1
+    chartype: 0
+    grade: 1
+    namekr: "\uC77C\uBC18 \uC880\uBE44"
+    nameen: Zombie
+    maxhp: 40
+    str: 60
+    dex: 60
+    wis: 60
+    main: 9001
+    sub: 0
+    armor: 0
+  - id: 2
+    chartype: 0
+    grade: 2
+    namekr: "\uB9E4\uC9C1 \uC880\uBE44"
+    nameen: Zombie
+    maxhp: 50
+    str: 60
+    dex: 60
+    wis: 60
+    main: 9001
+    sub: 0
+    armor: 0
+  - id: 3
+    chartype: 0
+    grade: 3
+    namekr: "\uB808\uC5B4 \uC880\uBE44"
+    nameen: Zombie
+    maxhp: 60
+    str: 60
+    dex: 60
+    wis: 60
+    main: 9001
+    sub: 0
+    armor: 0
+  - id: 4
+    chartype: 0
+    grade: 4
+    namekr: "\uC720\uB2C8\uD06C \uC880\uBE44"
+    nameen: Zombie
+    maxhp: 70
+    str: 60
+    dex: 60
+    wis: 60
+    main: 9001
+    sub: 0
+    armor: 0
+  - id: 5
+    chartype: 0
+    grade: 5
+    namekr: "\uC5D0\uD53D \uC880\uBE44"
+    nameen: Zombie
+    maxhp: 80
+    str: 60
+    dex: 60
+    wis: 60
+    main: 9001
+    sub: 0
+    armor: 0

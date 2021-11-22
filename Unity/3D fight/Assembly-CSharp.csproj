@@ -26,7 +26,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>UNITY_2021_1_23;UNITY_2021_1;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;USE_QUICK_SEARCH_MODULE;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2021_1_23;UNITY_2021_1;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;USE_QUICK_SEARCH_MODULE;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;UNITY_POST_PROCESSING_STACK_V2;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169,0649</NoWarn>
@@ -61,6 +61,7 @@
      <Compile Include="Assets\ExternalPlugins\Runtime\Util\ConvertExt.cs" />
      <Compile Include="Assets\2_Scripts\ReadSheet.cs" />
      <Compile Include="Assets\2_Scripts\Player\PlayerCombat.cs" />
+     <Compile Include="Assets\2_Scripts\SaveLoadManager.cs" />
      <Compile Include="Assets\ExternalPlugins\CalcEngine\CalcEngine.cs" />
      <Compile Include="Assets\2_Scripts\Player\PlayerAnimator.cs" />
      <Compile Include="Assets\ExternalPlugins\CalcEngine\FunctionDefinition.cs" />
@@ -85,7 +86,8 @@
      <Compile Include="Assets\2_Scripts\Monster\FSM\Core\Base\BHState.cs" />
      <Compile Include="Assets\ExternalPlugins\CalcEngine\Tester.cs" />
      <Compile Include="Assets\ExternalPlugins\Runtime\Sheet1.cs" />
-     <Compile Include="Assets\2_Scripts\SaveLoadManager.cs" />
+     <Compile Include="Assets\2_Scripts\TestAgent.cs" />
+     <Compile Include="Assets\2_Scripts\NavigationManager.cs" />
      <None Include="Assets\ExternalPlugins\ExcelPlugin\Templates\ScriptableObjectEditorClass.txt" />
      <None Include="Assets\ExternalPlugins\CalcEngine\readme.txt" />
      <None Include="Assets\SaveFile_1637126576.json" />
@@ -332,25 +334,25 @@
      <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.23f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
      <Reference Include="Google.Apis.Core">
-     <HintPath>C:/Users/User/Documents/GitHub/PlayGround/Unity/3D fight/Assets/Packages/Google.Apis.Core.1.55.0/lib/netstandard2.0/Google.Apis.Core.dll</HintPath>
+     <HintPath>D:/PlayGround/Unity/3D fight/Assets/Packages/Google.Apis.Core.1.55.0/lib/netstandard2.0/Google.Apis.Core.dll</HintPath>
      </Reference>
      <Reference Include="Google.Apis.Auth">
-     <HintPath>C:/Users/User/Documents/GitHub/PlayGround/Unity/3D fight/Assets/Packages/Google.Apis.Auth.1.55.0/lib/netstandard2.0/Google.Apis.Auth.dll</HintPath>
+     <HintPath>D:/PlayGround/Unity/3D fight/Assets/Packages/Google.Apis.Auth.1.55.0/lib/netstandard2.0/Google.Apis.Auth.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
-     <HintPath>C:/Users/User/Documents/GitHub/PlayGround/Unity/3D fight/Assets/Packages/Newtonsoft.Json.13.0.1/lib/netstandard2.0/Newtonsoft.Json.dll</HintPath>
+     <HintPath>D:/PlayGround/Unity/3D fight/Assets/Packages/Newtonsoft.Json.13.0.1/lib/netstandard2.0/Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="Google.Apis">
-     <HintPath>C:/Users/User/Documents/GitHub/PlayGround/Unity/3D fight/Assets/Packages/Google.Apis.1.55.0/lib/netstandard2.0/Google.Apis.dll</HintPath>
+     <HintPath>D:/PlayGround/Unity/3D fight/Assets/Packages/Google.Apis.1.55.0/lib/netstandard2.0/Google.Apis.dll</HintPath>
      </Reference>
      <Reference Include="Google.Apis.Sheets.v4">
-     <HintPath>C:/Users/User/Documents/GitHub/PlayGround/Unity/3D fight/Assets/Packages/Google.Apis.Sheets.v4.1.55.0.2371/lib/netstandard2.0/Google.Apis.Sheets.v4.dll</HintPath>
+     <HintPath>D:/PlayGround/Unity/3D fight/Assets/Packages/Google.Apis.Sheets.v4.1.55.0.2371/lib/netstandard2.0/Google.Apis.Sheets.v4.dll</HintPath>
      </Reference>
      <Reference Include="clipper_library">
-     <HintPath>C:/Users/User/Documents/GitHub/PlayGround/Unity/3D fight/Library/PackageCache/com.unity.cinemachine@2.7.8/Runtime/ThirdParty/clipper_library.dll</HintPath>
+     <HintPath>D:/PlayGround/Unity/3D fight/Library/PackageCache/com.unity.cinemachine@2.7.8/Runtime/ThirdParty/clipper_library.dll</HintPath>
      </Reference>
      <Reference Include="Google.Apis.Auth.PlatformServices">
-     <HintPath>C:/Users/User/Documents/GitHub/PlayGround/Unity/3D fight/Assets/Packages/Google.Apis.Auth.1.55.0/lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll</HintPath>
+     <HintPath>D:/PlayGround/Unity/3D fight/Assets/Packages/Google.Apis.Auth.1.55.0/lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.23f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -698,43 +700,57 @@
      <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.23f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
      </Reference>
      <Reference Include="Cinemachine">
-     <HintPath>C:/Users/User/Documents/GitHub/PlayGround/Unity/3D fight/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+     <HintPath>D:/PlayGround/Unity/3D fight/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VSCode.Editor">
-     <HintPath>C:/Users/User/Documents/GitHub/PlayGround/Unity/3D fight/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+     <HintPath>D:/PlayGround/Unity/3D fight/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
      </Reference>
      <Reference Include="com.unity.cinemachine.editor">
-     <HintPath>C:/Users/User/Documents/GitHub/PlayGround/Unity/3D fight/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+     <HintPath>D:/PlayGround/Unity/3D fight/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Postprocessing.Runtime">
+     <HintPath>D:/PlayGround/Unity/3D fight/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
-     <HintPath>C:/Users/User/Documents/GitHub/PlayGround/Unity/3D fight/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+     <HintPath>D:/PlayGround/Unity/3D fight/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>C:/Users/User/Documents/GitHub/PlayGround/Unity/3D fight/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+     <HintPath>D:/PlayGround/Unity/3D fight/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline.Editor">
-     <HintPath>C:/Users/User/Documents/GitHub/PlayGround/Unity/3D fight/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+     <HintPath>D:/PlayGround/Unity/3D fight/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
-     <HintPath>C:/Users/User/Documents/GitHub/PlayGround/Unity/3D fight/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+     <HintPath>D:/PlayGround/Unity/3D fight/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro">
-     <HintPath>C:/Users/User/Documents/GitHub/PlayGround/Unity/3D fight/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+     <HintPath>D:/PlayGround/Unity/3D fight/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Postprocessing.Editor">
+     <HintPath>D:/PlayGround/Unity/3D fight/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
-     <HintPath>C:/Users/User/Documents/GitHub/PlayGround/Unity/3D fight/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+     <HintPath>D:/PlayGround/Unity/3D fight/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>C:/Users/User/Documents/GitHub/PlayGround/Unity/3D fight/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+     <HintPath>D:/PlayGround/Unity/3D fight/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Rider.Editor">
-     <HintPath>C:/Users/User/Documents/GitHub/PlayGround/Unity/3D fight/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+     <HintPath>D:/PlayGround/Unity/3D fight/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
-     <HintPath>C:/Users/User/Documents/GitHub/PlayGround/Unity/3D fight/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+     <HintPath>D:/PlayGround/Unity/3D fight/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{b91f9ec7-4120-53f8-70f8-b80119284767}</Project>
+      <Name>NavMeshComponents</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{d0a0dc70-a023-6e40-ec0d-ac3471c2b44c}</Project>
+      <Name>NavMeshComponentsEditor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

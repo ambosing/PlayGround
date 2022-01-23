@@ -1,34 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BirdControl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Rigidbody _rigidbody;
+    
     void Start()
     {
         Screen.SetResolution(480, 800, false);
+        _rigidbody = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-            gameObject.GetComponent<Rigidbody>().AddForce(0, 300, 0);
+            _rigidbody.velocity = new Vector3(0, 0, 0);
+            _rigidbody.AddForce(0, 300, 0);
         }
 
-        if(Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             Time.timeScale = 1;
-            Application.LoadLevel("Game");
+            SceneManager.LoadScene("Game");
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        //Debug.Log("GameOver");
         Time.timeScale = 0;
         gameObject.GetComponent<Animator>().Play("Die");
     }

@@ -1,47 +1,33 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class ColumnMaker : MonoBehaviour
 {
-    public GameObject Column;
+    private WaitForSecondsRealtime columnInterval;
 
-    private float nowTime;
-    private float makeTime = 2f;
-
-    public Text ScoreUI;
-    private int score = 0;
-    private float scoreTime;
-
-    // Start is called before the first frame update
     void Start()
     {
-        nowTime = Time.time;
-        scoreTime = Time.time + 2;
+        columnInterval = new WaitForSecondsRealtime(2.5f);
+        StartCoroutine(MakeColumn());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator MakeColumn()
     {
-        if (Time.time - nowTime > makeTime)
+        yield return columnInterval;
+        while (true)
         {
-            nowTime = Time.time;
-            GameObject temp = Instantiate(Column);
-            temp.transform.parent = gameObject.transform;
-
-            float randomY = Random.Range(-6.15f, -1.5f);
-
-            temp.transform.localPosition = new Vector3
+            if (Time.timeScale == 0)
+                yield break;
+            GameObject column = PoolManager.Instance.Spawn("Column");
+            float randomY = Random.Range(-6.15f, -3f);
+            column.transform.parent = gameObject.transform;
+            column.transform.localPosition = new Vector3
                 (-gameObject.transform.localPosition.x + 5, randomY, 0);
-            temp.transform.localScale = new Vector3(1, 1, 1);
-        }
-
-        if (Time.time - scoreTime > 2)
-        {
-            scoreTime = Time.time;
-            score++;
-            ScoreUI.text = score.ToString();
+            yield return columnInterval;
         }
     }
+    
+    
+    
 }
